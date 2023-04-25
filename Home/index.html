@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Connect style.css-->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Link Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudfare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- Scroll Reveal Effect-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    
+
+    <!-- Web Title -->
+    <title>PIMS</title>
+
+</head>
+<body>
+    <header>
+        <strong><a href="#home" class="logo">PIMS</a></strong>
+        <nav>
+            <ul class="navlist">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#login">Login</a></li>
+            </ul>
+        </nav>
+        <div class="bx bx-menu" id="menu-icon"></div>
+    </header>
+
+    <section id="home" class="home">
+        <div class="home-text">
+            <h2>Welcome to PIMS</h2>
+            <p><strong>PIMS (Perpetual Inventory Management Systems)</strong></p>
+        </div>
+
+        <div class="home-image">
+            <img src="box.png" height="600" width="600" />
+        </div>
+
+
+
+        <div class="about" id="about">
+            <div class="about-text">
+                <h2>About PIMS</h2>
+                <p><strong>PIMS (Perpetual Inventory Management Systems)</strong></p>
+            </div>
+        </div>
+
+
+
+    </section>
+
+    <script>
+
+        let menu = document.querySelector('#menu-icon');
+        let navlist = document.querySelector('.navlist');
+
+        menu.onclick = () => {
+            menu.classList.toggle('bx-x');
+            navlist.classList.toggle('open');
+        }
+
+        const sr = ScrollReveal({
+            distance: '65px',
+            duration: 2600,
+            delay: 400,
+            reset: true
+        });
+        ScrollReveal().reveal('.home-text', { delay: 100, origin: 'left' });
+        ScrollReveal().reveal('.home-image', { delay: 250, origin: 'top' });
+        ScrollReveal().reveal('.about-text', { delay: 100, origin: 'left' });
+    </script>
+
+
+
+
+</body>
+</html>
